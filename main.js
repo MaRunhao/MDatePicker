@@ -1,11 +1,11 @@
 (function(){
-	var datepicker = window.datepicker;
+	var MDatePicker = window.MDatePicker;
 
 	var monthData,
 		$wrapper;
 
-	datepicker.buildUI = function(year, month){
-		monthData = datepicker.getMonthData(year, month);
+	MDatePicker.buildUI = function(year, month){
+		monthData = MDatePicker.getMonthData(year, month);
 		var html = '<div class="ui-datepicker-header">' +
 			'<a href="#" class="ui-datepicker-btn ui-datepicker-prev">&lt;</a>' +
 			'<a href="#" class="ui-datepicker-btn ui-datepicker-next">&gt;</a>' +
@@ -44,7 +44,7 @@
 		return html;
 	};
 
-	datepicker.render = function(direction){
+	MDatePicker.render = function(direction){
 
 		var year ,
 			month;
@@ -56,7 +56,7 @@
 		if(direction == 'prev') month--;
 		if(direction == 'next') month++;
 		
-		var html = datepicker.buildUI(year, month);
+		var html = MDatePicker.buildUI(year, month);
 		// document.body.innerHTML += html;
 		// <div class="ui-datepicker-wrapper">
 		
@@ -67,8 +67,8 @@
 		$wrapper.innerHTML = html;
 	}
 
-	datepicker.init = function(input){
-		datepicker.render();
+	MDatePicker.init = function(input){
+		MDatePicker.render();
 
 		// document.body.appendChild($wrapper);
 		var $input = document.querySelector(input);
@@ -99,10 +99,10 @@
 			var $target = e.target;
 			if($target.classList.contains('ui-datepicker-btn')){
 				if($target.classList.contains('ui-datepicker-prev')){
-					datepicker.render('prev')
+					MDatePicker.render('prev')
 				}
 				if($target.classList.contains('ui-datepicker-next')){
-					datepicker.render('next')
+					MDatePicker.render('next')
 				}
 			}
 

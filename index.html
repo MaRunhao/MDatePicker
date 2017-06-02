@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="./style.css">
-	<title>datepicker</title>
+	<title>MDatePicker</title>
 	<style>
-		.datepicker{
+		.MDatePicker{
 			border: 1px solid #ccc;
 			border-radius: 4px;
 			height: 20px;
@@ -14,20 +14,20 @@
 			width: 230px;
 		}
 
-		.datepicker:focus{
+		.MDatePicker:focus{
 			outline: 0 none;
 			border: 1px solid #1abc9c;
 		}
 	</style>
 </head>
 <body>
-	<input type="text" class="datepicker">
+	<input type="text" class="MDatePicker">
 	<script type="text/javascript" src="./data.js"></script>
 	<script type="text/javascript" src="./main.js"></script>
 	<script>
 		// var monthData = datepicker.getMonthData(2016, 12);
 		// console.log(monthData)
-		datepicker.init('.datepicker');
+		MDatePicker.init('.MDatePicker');
 	</script>
 </body>
 </html>

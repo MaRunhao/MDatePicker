@@ -1,7 +1,7 @@
 (function(){
-	var datepicker = {};
+	var MDatePicker = {};
 
-	datepicker.getMonthData = function(year, month){
+	MDatePicker.getMonthData = function(year, month){
 		var ret = [];
 		if(!year || !month){
 			var today = new Date();
@@ -56,5 +56,5 @@
 	}
 
 
-	window.datepicker = datepicker;
+	window.MDatePicker = MDatePicker;
 })();
