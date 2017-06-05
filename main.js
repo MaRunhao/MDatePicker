@@ -29,10 +29,15 @@
 				'<tbody>';
 		for(var i = 0; i < monthData.days.length; i++){
 			var date = monthData.days[i];
+			var col = ' class="otherMon" ';
 			if(i%7 === 0){
 				html += '<tr>';
 			}
-			html += '<td data-date="'+  date.date +'">'+ date.showDate +'</td>'
+			if(monthData.month !== date.month){
+				html += '<td'+ col +'data-date="'+  date.date +'">'+ date.showDate +'</td>';
+			}else{
+				html += '<td data-date="'+  date.date +'">'+ date.showDate +'</td>';
+			}
 			if(i%7 === 6){
 				html += '</tr>';
 			}
@@ -88,12 +93,12 @@
 			}
 		}, false);
 
-		$input.addEventListener('blur', function(){
-			if(isOpen){
-				document.body.removeChild($wrapper);
-				isOpen = false;
-			}
-		}, false);
+		// $input.addEventListener('blur', function(){
+		// 	if(isOpen){
+		// 		document.body.removeChild($wrapper);
+		// 		isOpen = false;
+		// 	}
+		// }, false);
 
 		$wrapper.addEventListener('click', function(e){
 			var $target = e.target;

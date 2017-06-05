@@ -65,6 +65,10 @@
 	cursor: pointer;
 }
 
+.ui-datepicker-body table td.otherMon{
+	color: #cbcbcb;
+}
+
 .ui-datepicker-body table td:hover{
 	color: #fff;
 	background: #1ab;
